@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-function fish_prompt -d "Write out the prompt"
+function fish_prompt -d
     set -l last_status $status
     set -l stat
     if test $last_status -ne 0
