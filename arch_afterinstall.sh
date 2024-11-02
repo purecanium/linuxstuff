@@ -19,4 +19,4 @@ sudo echo "QT_QPA_PLATFORMTHEME=qt5ct" >> "/etc/environment"
 
 echo "Slow down touchpad scrolling speed by 50%"
 yay -S libinput-config
-sudo echo "scroll-factor=0.5" > /etc/libinput.conf
+echo "scroll-factor=0.5" | sudo tee /etc/libinput.conf > /dev/null
