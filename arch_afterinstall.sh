@@ -3,16 +3,19 @@
 # Archlinux after-install script for laptop users.
 # Run this script as user with sudo privilage.
 
+echo "Update package managing stuff"
 sudo pacman-key --init
 sudo pacman-key --populate
+sudo pacman -Syy reflector
+
+echo "Update mirror"
+sudo reflector -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 
 echo "Activate pararrel download"
 sudo sed -i '/^#ParallelDownloads =/c\ParallelDownloads = 5' /etc/pacman.conf
 
-sudo pacman -Syu base-devel git qt5ct reflector 
-
-echo "Update mirror"
-sudo reflector -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+echo "Install essential package"
+sudo pacman -Syu base-devel git qt5ct
 
 echo "Installing yay (AUR helper)"
 cd /opt
