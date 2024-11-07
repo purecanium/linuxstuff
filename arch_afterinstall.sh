@@ -2,6 +2,7 @@
 
 # Archlinux after-install script for laptop users.
 # Run this script as user with sudo privilage.
+# On a fresh archlinux install, run "su YOUR_USERNAME"
 
 echo "Update package managing stuff"
 sudo pacman-key --init
