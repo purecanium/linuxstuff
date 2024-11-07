@@ -15,7 +15,7 @@ echo "Activate pararrel download"
 sudo sed -i '/^#ParallelDownloads =/c\ParallelDownloads = 5' /etc/pacman.conf
 
 echo "Install essential package"
-sudo pacman -Syu base-devel git qt5ct
+sudo pacman -Syu base-devel git qt5ct gvfs ntfs-3g
 
 echo "Installing yay (AUR helper)"
 cd /opt
