@@ -15,7 +15,7 @@ cd
 
 echo "Set qt5ct environment variable (for theming purposes)"
 sudo pacman -S qt5ct
-sudo echo "QT_QPA_PLATFORMTHEME=qt5ct" >> "/etc/environment"
+echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee -a /etc/environment > /dev/null
 
 echo "Slow down touchpad scrolling speed by 50%"
 yay -S libinput-config
