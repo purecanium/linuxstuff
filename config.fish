@@ -11,7 +11,3 @@ function fish_prompt -d
     echo -s (set_color green -o) "┌──(" (set_color blue -o) "$USER" (set_color normal -o) "@" (set_color blue -o) "$hostname" (set_color green) ")-[" (set_color white -o) (prompt_pwd --full-length-dirs 2) (set_color green) "]" (fish_git_prompt) " $stat"
     echo -s (set_color green) "└─" (set_color blue -o) '$ ' (set_color normal)
 end
-
-clear
-cd /storage/emulated/0
-neofetch
